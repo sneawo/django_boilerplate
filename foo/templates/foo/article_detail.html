@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ article.title }}</h1>
+    {{ article.text|linebreaks }}
+    <a href="edit/" class="btn">Edit</a> 
+    <a href="delete/" class="btn">Delete</a>
+{% endblock %}

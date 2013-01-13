@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url 'article-create' %}" class="btn">Add Article</a>
+    <hr>
+    {% if article_list %}
+	    <ul>
+	    {% for article in article_list %}       
+	        <li><a href="{{ article.get_absolute_url }}">{{ article }}</a></li>
+	    {% endfor %}
+	    </ul>
+    {% else %}
+    	<p>No articles.</p>
+    {% endif %}
+{% endblock %}
