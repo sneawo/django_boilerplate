@@ -4,7 +4,8 @@ from django.views.generic import TemplateView
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     url(r'^$', TemplateView.as_view(template_name="home.html"), name='home'),
     url(r'^foo/', include('foo.urls')),
     url(r'^accounts/', include('allauth.urls')),
